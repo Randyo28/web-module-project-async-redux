@@ -1,13 +1,13 @@
 import Header from './components/Header'
-import Beer from './components/Beer'
+import Beers from './components/Beers'
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      {/* <Header/> */}
-      <Beer/>
+      <Header/>
+      <Beers/>
     </div>
   );
 }

@@ -1,33 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { fetchData } from '../store/';
-import { useEffect } from 'react';
 
-function Beer(props) {
+const Beer = (props) => {
 
-    const { fetchData } = props;
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    const {name, image_url} = props.beer
 
     return (
-        <div>
-            <div>
-            {props.beers.map(beer => {
-                return (
-                <p key={beer.id}>{beer.name}</p>
-                )
-             })}
+            <div className='beer-container'>
+                <h2 className='beer-name'>{name}</h2>
+                <img className='beer-image' src={image_url} alt='beer'/>
             </div>
-        </div>
+    
     );
-}
+};
 
-const mapStateToProps = (state) => {
-    return {
-    beers: state.beers
-    }
-  }
-
-export default connect(mapStateToProps, {fetchData})(Beer);
+export default Beer;
