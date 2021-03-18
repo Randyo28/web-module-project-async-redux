@@ -65,19 +65,31 @@ html{
   height: 4rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header h1{
   font-size: 2rem;
+  margin-left: 1rem;
 }
 
 .list{
   display:flex;
   font-size: 1.5rem;
 }
-.list li {
-  margin-right: 1rem;
+.list a {
+  margin-right: 6rem;
+  text-decoration: none;
+  color:#000;
 }
+
+/*Home.js */
+.home-background{
+  background-image: url('https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  height: 100vh;
+  background-size: cover;
+}
+
 
 /*Beer.js */
 .background-image {
@@ -89,13 +101,18 @@ html{
   flex-flow: row wrap;
 }
 
+.loading{
+  color:red;
+  font-size: 3rem;
+}
+
 .beer-container{
   height:100%;
   width: 32%;
 }
 
 .beer-image{
-  height:80vh;
+  height:50vh;
 }
 
 .beer-name{

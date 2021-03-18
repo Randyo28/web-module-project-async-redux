@@ -12,6 +12,8 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: true,
+                beers: [],
+                error: ''
             }
         case FETCH_BEERS_SUCCESS:
             return {
@@ -26,7 +28,6 @@ export const reducer = (state = initialState, action) => {
                 beers: [],
                 loading: false,
                 error: action.payload
-
             }
         default :
         return state

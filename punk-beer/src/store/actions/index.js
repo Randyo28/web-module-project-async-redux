@@ -8,7 +8,6 @@ export const fetchData = () => {
     return (dispatch) => {
       // tell the reducer we are going to enter a "loading state"
       dispatch({ type: FETCH_BEERS_START });
-  
       // start the fetch
       axios
         .get("https://api.punkapi.com/v2/beers")

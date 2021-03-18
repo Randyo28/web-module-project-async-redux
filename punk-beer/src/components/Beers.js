@@ -14,10 +14,11 @@ function Beers(props) {
   }, [fetchData]);
 
     return (
-        <div className="background-image">
+      <div className="background-image">
+              {props.loading ? <h1 className="loading">Loading....</h1> : null }
             <div className='beers-container'>
             {props.beers.map(beer => {
-                return (
+              return (
                 <Beer key={beer.id} beer={beer}/>
                 )
              })}
@@ -28,7 +29,8 @@ function Beers(props) {
 
 const mapStateToProps = (state) => {
     return {
-    beers: state.beers
+    beers: state.beers,
+    loading: state.loading,
     }
   }
 
