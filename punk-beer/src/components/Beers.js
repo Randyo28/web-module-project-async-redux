@@ -1,11 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { fetchData } from '../store';
 import { useEffect } from 'react';
 
 import Beer from './Beer'
 
 function Beers(props) {
+
+  const {beers, loading} = useSelector((state) => state)
 
     const { fetchData } = props;
 
@@ -15,9 +17,9 @@ function Beers(props) {
 
     return (
       <div className="background-image">
-              {props.loading ? <h1 className="loading">Loading....</h1> : null }
+              {loading ? <h1 className="loading">Loading....</h1> : null }
             <div className='beers-container'>
-            {props.beers.map(beer => {
+            {beers.map(beer => {
               return (
                 <Beer key={beer.id} beer={beer}/>
                 )
@@ -27,11 +29,4 @@ function Beers(props) {
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-    beers: state.beers,
-    loading: state.loading,
-    }
-  }
-
-export default connect(mapStateToProps, {fetchData})(Beers);
+export default connect(null, {fetchData})(Beers);
