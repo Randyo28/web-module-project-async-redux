@@ -1,0 +1,122 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* */
+
+html{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.header{
+  background-color: antiquewhite;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1{
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.list{
+  display:flex;
+  font-size: 1.5rem;
+}
+.list a {
+  margin-right: 6rem;
+  text-decoration: none;
+  color:#000;
+}
+
+/*Home.js */
+.home-background{
+  background-image: url('https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  height: 100vh;
+  background-size: cover;
+}
+
+
+/*Beer.js */
+.background-image {
+  background: linear-gradient(90deg, rgba(59,59,140,1) 0%, rgba(76,12,221,1) 100%);
+}
+
+.beers-container {
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.loading{
+  color:red;
+  font-size: 3rem;
+}
+
+.beer-container{
+  height:100%;
+  width: 32%;
+}
+
+.beer-image{
+  height:50vh;
+}
+
+.beer-name{
+  font-size: 2rem;
+  color:#fff;
+  margin: 1rem 0;
+}
