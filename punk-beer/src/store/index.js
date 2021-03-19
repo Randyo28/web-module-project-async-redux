@@ -1,2 +1,2 @@
-export { reducer } from './reducers'
-export { fetchData } from "./actions";
+export { beersReducer, singleReducer } from './reducers'
+export { fetchData, fetchSingleData } from "./actions";

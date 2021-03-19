@@ -1,13 +1,15 @@
 import React from 'react';
-import { connect, useSelector } from 'react-redux';
+import { connect, useSelector} from 'react-redux';
 import { fetchData } from '../store';
 import { useEffect } from 'react';
+import Loader from 'react-loader-spinner'
 
 import Beer from './Beer'
 
 function Beers(props) {
 
-  const {beers, loading} = useSelector((state) => state)
+  const {beers, loading} = useSelector((state) => state.beers)
+  
 
     const { fetchData } = props;
 
@@ -17,7 +19,13 @@ function Beers(props) {
 
     return (
       <div className="background-image">
-              {loading ? <h1 className="loading">Loading....</h1> : null }
+              {loading ? <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={3000} //3 secs
+      /> : null }
             <div className='beers-container'>
             {beers.map(beer => {
               return (
